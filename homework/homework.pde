@@ -1,16 +1,15 @@
 void setup(){
   size(500,500);
-  drawLine(200,300,-90,0);
+  drawLine(250,300,-90,0);
 }
 
 void drawLine(float x, float y,float angle ,float level){
   level++;
-  if(level>5){
+  if(level>10){
     noStroke();
     fill(255,255,255);
-    ellipse(x,y,25,25);
-    fill(230,65,180);
-    ellipse(x,y,12,12);
+    ellipse(x,y,10,10);
+
     return;
   }
   
@@ -27,9 +26,11 @@ void drawLine(float x, float y,float angle ,float level){
   drawLine(x3,y3,(angle-22),level);
 }
 
-void draw(float x,float y){
-  x=x+1;
-  y=y+1;
-  fill(33,128,88);
-  ellipse(155,155,25,25);
+void draw(){
+  line(250,300,0,-10000);
+fill(241,24,44);
+ellipse(200,300,25,25);
+rect(188,320,25,55);
+ellipse(300,300,25,25);
+triangle(300,320,280,370,320,370);
 }
